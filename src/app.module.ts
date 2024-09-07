@@ -6,6 +6,7 @@ import { UserModule } from './user/user.module';
 import { User } from "./user/entities/user.entity";
 import { UploadFileModule } from './upload-file/upload-file.module';
 import { MulterModule } from "@nestjs/platform-express";
+import { DownloadModule } from './download/download.module';
 
 @Module({
   imports: [
@@ -21,7 +22,8 @@ import { MulterModule } from "@nestjs/platform-express";
       // autoLoadEntities: true,
     }),
     UserModule,
-    UploadFileModule
+    UploadFileModule,
+    DownloadModule
   ],
   controllers: [AppController],
   providers: [AppService],
